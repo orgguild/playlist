@@ -4,7 +4,7 @@ const videoPlayer = document.getElementById('videoPlayer');
 const playlist = [
   'videos/video1.mp4',
   'videos/video2.mp4',
-  'ideos/Video1.2.mp4',
+  'videos/Video1.2.mp4',
   'videos/video3.mp4',
   'videos/Video1.1.mp4',
   'videos/video4.mp4',
