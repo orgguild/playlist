@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'm in!</title>
+  <style>
+    /* Fullscreen video with no controls */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+      overflow: hidden;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video element without controls -->
+  <video id="videoPlayer" autoplay muted playsinline></video>
+
+  <!-- Script with versioning to force reload -->
+  <script src="script.js?v=1.0.0" defer></script>
+</body>
+</html>
