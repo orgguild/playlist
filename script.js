@@ -126,4 +126,3 @@ videoPlayer.addEventListener('ended', () => {
 // Старт
 playVideo(currentIndex);
 preloadNextVideo();
-</script>
