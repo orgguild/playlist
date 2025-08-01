@@ -26,15 +26,19 @@ function playVideo(index) {
   try {
     const playPromise = videoPlayer.play();
     if (playPromise && typeof playPromise.then === "function") {
-      playPromise.catch(err => {
-        console.warn(`Playback error for ${videoSrc}. Retry #${retryCount + 1}:`, err);
-        retryOrSkip(index);
-      });
+      playPromise
+        .then(() => {
+          console.log(`Playback started successfully for ${videoSrc}`);
+        })
+        .catch((err) => {
+          console.warn(`Playback error for ${videoSrc}. Retry #${retryCount + 1}:`, err);
+          retryOrSkip(index);
+        });
     } else {
       console.log('Playing without Promise support.');
     }
   } catch (err) {
-    console.warn(`Immediate play() failure. Retry #${retryCount + 1}:`, err);
+    console.warn(`Immediate play() failure for ${videoSrc}. Retry #${retryCount + 1}:`, err);
     retryOrSkip(index);
   }
 }
