@@ -5,7 +5,9 @@ const videoPlayer = document.getElementById('videoPlayer');
 // Список видеофайлов
 const playlist = [
   'videos/NewTone.MP4',
-  'videos/Sojka.MP4'
+  'videos/Sojka.MP4',
+  'Masaz.mp4',
+  'Ser.mp4'
 ];
 
 let currentIndex = 0;
