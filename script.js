@@ -26,7 +26,7 @@ function playVideo(index) {
   try {
     const playPromise = videoPlayer.play();
     if (playPromise && typeof playPromise.then === "function") {
-      playPromise.catch(err => {
+      playPromise.catch(err) => {
         console.warn(`Playback error for ${videoSrc}. Retry #${retryCount + 1}:`, err);
         retryOrSkip(index);
       });
