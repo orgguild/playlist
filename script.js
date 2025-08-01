@@ -1,4 +1,3 @@
-<script>
 "use strict";
 
 const videoPlayer = document.getElementById('videoPlayer');
