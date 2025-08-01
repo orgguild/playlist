@@ -6,8 +6,8 @@ const videoPlayer = document.getElementById('videoPlayer');
 const playlist = [
   'videos/NewTone.MP4',
   'videos/Sojka.MP4',
-  'Masaz.mp4',
-  'Ser.mp4'
+  'videos/Masaz.mp4',
+  'videos/Ser.mp4'
 ];
 
 let currentIndex = 0;
