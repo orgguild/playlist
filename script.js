@@ -1,3 +1,4 @@
+use strict;
 const videoPlayer = document.getElementById('videoPlayer');
 
 // List of video file paths
