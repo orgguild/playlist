@@ -4,10 +4,10 @@ const videoPlayer = document.getElementById('videoPlayer');
 
 // Список видеофайлов
 const playlist = [
-  'videos/Newtone_low.mp4',
-  'videos/Sojka_low1.mp4',
-  'videos/Masaz_low.mp4',
-  'videos/Ser_low.mp4'
+  'videos/NewTone.MP4',
+  'videos/Sojka.MP4',
+  'videos/Masaz.mp4',
+  'videos/Ser.mp4'
 ];
 
 let currentIndex = 0;
