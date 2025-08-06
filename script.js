@@ -2,7 +2,7 @@
 
 const videoPlayer = document.getElementById('videoPlayer');
 
-// Список видеофайлов
+// List of video files
 const playlist = [
   'videos/NewTone.MP4',
   'videos/Sojka.MP4',
@@ -16,7 +16,7 @@ const maxRetries = 5;
 let preloadedVideo = null;
 let lastCommitSHA = null;
 
-// Воспроизведение видео с учётом старых WebView
+// Play video (with support for older WebViews)
 function playVideo(index) {
   const videoSrc = playlist[index];
   console.log(`Playing video: ${videoSrc}`);
@@ -43,7 +43,7 @@ function playVideo(index) {
   }
 }
 
-// Повтор или переход к следующему видео
+// Retry or skip to the next video
 function retryOrSkip(index) {
   retryCount++;
   if (retryCount >= maxRetries) {
@@ -57,7 +57,7 @@ function retryOrSkip(index) {
   }
 }
 
-// Предзагрузка следующего видео
+// Preload the next video
 function preloadNextVideo() {
   if (preloadedVideo) {
     document.body.removeChild(preloadedVideo);
@@ -71,7 +71,7 @@ function preloadNextVideo() {
   document.body.appendChild(preloadedVideo);
 }
 
-// Проверка на новую версию на GitHub
+// Check for a new version on GitHub
 function checkForUpdateByCommitSHA() {
   const apiURL = 'https://api.github.com/repos/karima-st/video-playlist/commits/main';
 
@@ -104,6 +104,7 @@ function checkForUpdateByCommitSHA() {
   }
 }
 
+// Handle SHA comparison and reload if updated
 function handleCommitSHA(latestSHA) {
   if (lastCommitSHA && latestSHA !== lastCommitSHA) {
     console.log('New version detected from GitHub. Reloading...');
@@ -112,16 +113,16 @@ function handleCommitSHA(latestSHA) {
   lastCommitSHA = latestSHA;
 }
 
-// Перезагрузка каждые 12 часов
+// Reload the page every 12 hours
 setInterval(() => {
   console.log('12 hours passed. Reloading the page...');
   location.reload();
-}, 43200000); // 12 часов
+}, 43200000); // 12 hours
 
-// Проверка обновлений раз в минуту
+// Check for updates every minute
 setInterval(checkForUpdateByCommitSHA, 60000);
 
-// Обработка окончания видео
+// Handle video end
 videoPlayer.addEventListener('ended', () => {
   retryCount = 0;
   currentIndex = (currentIndex + 1) % playlist.length;
@@ -129,6 +130,6 @@ videoPlayer.addEventListener('ended', () => {
   preloadNextVideo();
 });
 
-// Старт
+// Initial start
 playVideo(currentIndex);
 preloadNextVideo();
