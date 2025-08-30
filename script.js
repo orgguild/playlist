@@ -12,34 +12,34 @@ const playlists = {
     'videos/Masaz.mp4',
     'videos/Ser.mp4'
   ],
-  Indicum: [
+  indicum: [
     'videos/NewTone.MP4',
     'videos/Sojka.MP4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4'
   ],
-  Pan_tu_nie_stal: [
+  pan_tu_nie_stal: [
     'videos/NewTone.MP4',
     'videos/Sojka.MP4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4'
   ],
-  New_Tone: [  
+  new_tone: [  
     'videos/Sojka.MP4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4' 
     ],
-  Prawda: [
+  prawda: [
     'videos/NewTone.MP4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4'
     ],
-  Yes_Ser: [
+  yes_ser: [
     'videos/NewTone.MP4',
     'videos/Sojka.MP4',
     'videos/Masaz.mp4'
     ],
-Synergy: [
+  synergy: [
     'videos/NewTone.MP4',
     'videos/Sojka.MP4',
     'videos/Masaz.mp4',
