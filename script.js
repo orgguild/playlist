@@ -7,7 +7,9 @@ const playlist = [
   'videos/NewTone.MP4',
   'videos/Sojka.MP4',
   'videos/Masaz.mp4',
-  'videos/Ser.mp4'
+  'videos/Ser.mp4',
+  // Test video from Google Drive
+  'https://drive.google.com/uc?export=download&id=18Hfu_4zUlyF_Zds6L-_v8bql-juKEb_q'
 ];
 
 let currentIndex = 0;
