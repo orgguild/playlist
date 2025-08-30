@@ -9,7 +9,7 @@ const playlist = [
   'videos/Masaz.mp4',
   'videos/Ser.mp4',
   // Test video from Google Drive
-  'https://drive.google.com/uc?export=download&id=18Hfu_4zUlyF_Zds6L-_v8bql-juKEb_q'
+  'https://drive.google.com/uc?export=download&id=1wPuPXWq7deYrHD1UUk_44q14QqyXkopr'
 ];
 
 let currentIndex = 0;
