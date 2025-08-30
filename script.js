@@ -34,7 +34,7 @@ const playlists = {
     'videos/Masaz.mp4',
     'videos/Ser.mp4'
     ].
-Yes_Ser: [
+  Yes_Ser: [
     'videos/NewTone.MP4',
     'videos/Sojka.MP4',
     'videos/Masaz.mp4'
