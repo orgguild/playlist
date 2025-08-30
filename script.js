@@ -8,8 +8,6 @@ const playlist = [
   'videos/Sojka.MP4',
   'videos/Masaz.mp4',
   'videos/Ser.mp4',
-  // Test video from Google Drive
-  'https://drive.google.com/uc?export=download&id=1wPuPXWq7deYrHD1UUk_44q14QqyXkopr'
 ];
 
 let currentIndex = 0;
