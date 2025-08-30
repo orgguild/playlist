@@ -2,13 +2,53 @@
 
 const videoPlayer = document.getElementById('videoPlayer');
 
-// List of video files
-const playlist = [
-  'videos/NewTone.MP4',
-  'videos/Sojka.MP4',
-  'videos/Masaz.mp4',
-  'videos/Ser.mp4',
-];
+// ======================
+// 🎵 Playlists (from repository videos)
+// ======================
+const playlists = {
+  default: [
+    'videos/NewTone.MP4',
+    'videos/Sojka.MP4',
+    'videos/Masaz.mp4',
+    'videos/Ser.mp4'
+  ],
+  Indicum: [
+    'videos/NewTone.MP4',
+    'videos/Sojka.MP4',
+    'videos/Masaz.mp4',
+    'videos/Ser.mp4'
+  ],
+  Pan_tu_nie_stal: [
+    'videos/NewTone.MP4',
+    'videos/Sojka.MP4',
+    'videos/Masaz.mp4',
+    'videos/Ser.mp4'
+  ],
+  New_Tone: [  
+    'videos/Sojka.MP4',
+    'videos/Masaz.mp4',
+    'videos/Ser.mp4' 
+    ],
+  Prawda: [
+    'videos/NewTone.MP4',
+    'videos/Masaz.mp4',
+    'videos/Ser.mp4'
+    ].
+Yes_Ser: [
+    'videos/NewTone.MP4',
+    'videos/Sojka.MP4',
+    'videos/Masaz.mp4'
+    ],
+Synergy: [
+    'videos/NewTone.MP4',
+    'videos/Sojka.MP4',
+    'videos/Masaz.mp4',
+    'videos/Ser.mp4'
+    ]
+};
+
+let currentPlaylistName = new URLSearchParams(window.location.search).get("list") || "default";
+let playlist = playlists[currentPlaylistName] || playlists.default;
 
 let currentIndex = 0;
 let retryCount = 0;
@@ -16,7 +56,9 @@ const maxRetries = 5;
 let preloadedVideo = null;
 let lastCommitSHA = null;
 
-// Play video (with support for older WebViews)
+// ======================
+// ⚙️ Play video
+// ======================
 function playVideo(index) {
   const videoSrc = playlist[index];
   console.log(`Playing video: ${videoSrc}`);
@@ -43,7 +85,9 @@ function playVideo(index) {
   }
 }
 
-// Retry or skip to the next video
+// ======================
+// ⚙️ Retry or skip
+// ======================
 function retryOrSkip(index) {
   retryCount++;
   if (retryCount >= maxRetries) {
@@ -57,7 +101,9 @@ function retryOrSkip(index) {
   }
 }
 
-// Preload the next video
+// ======================
+// ⚙️ Preload next video
+// ======================
 function preloadNextVideo() {
   if (preloadedVideo) {
     document.body.removeChild(preloadedVideo);
@@ -71,7 +117,9 @@ function preloadNextVideo() {
   document.body.appendChild(preloadedVideo);
 }
 
-// Check for a new version on GitHub
+// ======================
+// ⚙️ GitHub update check
+// ======================
 function checkForUpdateByCommitSHA() {
   const apiURL = 'https://api.github.com/repos/karima-st/video-playlist/commits/main';
 
@@ -104,7 +152,6 @@ function checkForUpdateByCommitSHA() {
   }
 }
 
-// Handle SHA comparison and reload if updated
 function handleCommitSHA(latestSHA) {
   if (lastCommitSHA && latestSHA !== lastCommitSHA) {
     console.log('New version detected from GitHub. Reloading...');
@@ -122,7 +169,9 @@ setInterval(() => {
 // Check for updates every minute
 setInterval(checkForUpdateByCommitSHA, 60000);
 
-// Handle video end
+// ======================
+// ⚙️ Handle video end
+// ======================
 videoPlayer.addEventListener('ended', () => {
   retryCount = 0;
   currentIndex = (currentIndex + 1) % playlist.length;
@@ -130,6 +179,8 @@ videoPlayer.addEventListener('ended', () => {
   preloadNextVideo();
 });
 
-// Initial start
+// ======================
+// ⚙️ Initial start
+// ======================
 playVideo(currentIndex);
 preloadNextVideo();
