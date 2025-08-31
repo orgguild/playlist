@@ -10,7 +10,7 @@ const playlists = {
     'videos/NewTone.MP4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4',
-    'videos/Prawda.mov'
+    'videos/Parawda.mov'
   ],
   indicum: [
     'videos/NewTone.MP4',
