@@ -8,25 +8,24 @@ const videoPlayer = document.getElementById('videoPlayer');
 const playlists = {
   default: [
     'videos/NewTone.MP4',
-    'videos/Sojka.MP4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4',
     'videos/Prawda.mov'
   ],
   indicum: [
     'videos/NewTone.MP4',
-    'videos/Sojka.MP4',
+    'videos/Prawda.mov',
     'videos/Masaz.mp4',
     'videos/Ser.mp4'
   ],
   pan_tu_nie_stal: [
     'videos/NewTone.MP4',
-    'videos/Sojka.MP4',
+    'videos/Prawda.mov',
     'videos/Masaz.mp4',
     'videos/Ser.mp4'
   ],
   new_tone: [  
-    'videos/Sojka.MP4',
+    'videos/Prawda.mov',
     'videos/Masaz.mp4',
     'videos/Ser.mp4' 
     ],
@@ -37,7 +36,7 @@ const playlists = {
     ],
   yes_ser: [
     'videos/NewTone.MP4',
-    'videos/Sojka.MP4',
+    'videos/Prawda.mov',
     'videos/Masaz.mp4'
     ],
   synergy: [
