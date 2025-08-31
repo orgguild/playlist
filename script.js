@@ -10,24 +10,24 @@ const playlists = {
     'videos/NewTone.MP4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4',
-    'videos/Prawda.mov',
+    'videos/Prawda.mp4',
     'videos/PanTuNieStal.mp4'
   ],
   indicum: [
     'videos/NewTone.MP4',
-    'videos/Prawda.mov',
+    'videos/Prawda.mp4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4',
     'videos/PanTuNieStal.mp4'
   ],
   pan_tu_nie_stal: [
     'videos/NewTone.MP4',
-    'videos/Prawda.mov',
+    'videos/Prawda.mp4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4'
   ],
   new_tone: [  
-    'videos/Prawda.mov',
+    'videos/Prawda.mp4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4',
     'videos/PanTuNieStal.mp4'
@@ -40,13 +40,13 @@ const playlists = {
     ],
   yes_ser: [
     'videos/NewTone.MP4',
-    'videos/Prawda.mov',
+    'videos/Prawda.mp4',
     'videos/Masaz.mp4',
     'videos/PanTuNieStal.mp4'
     ],
   synergy: [
     'videos/NewTone.MP4',
-    'videos/Sojka.MP4',
+    'videos/Prawda.mp4',
     'videos/Masaz.mp4',
     'videos/Ser.mp4',
     'videos/PanTuNieStal.mp4'
