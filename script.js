@@ -13,7 +13,6 @@ const playlists = {
   ],
   indicum: [
     'videos/NewTone.MP4',
-    'videos/Masaz.mp4',
     'videos/Ser.mp4'
   ],
   new_tone: [  
