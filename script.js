@@ -9,19 +9,23 @@ const playlists = {
   default: [
     'videos/NewTone.MP4',
     'videos/Masaz.mp4',
-    'videos/Ser.mp4'
+    'videos/Ser.mp4',
+    'videos/Synergy.mp4'
   ],
   indicum: [
     'videos/NewTone.MP4',
-    'videos/Ser.mp4'
+    'videos/Ser.mp4',
+    'videos/Synergy.mp4'
   ],
   new_tone: [  
     'videos/Masaz.mp4',
-    'videos/Ser.mp4'
+    'videos/Ser.mp4',
+    'videos/Synergy.mp4'
     ],
   yes_ser: [
     'videos/NewTone.MP4',
-    'videos/Masaz.mp4'
+    'videos/Masaz.mp4',
+    'videos/Synergy.mp4'
     ],
   synergy: [
     'videos/NewTone.MP4',
